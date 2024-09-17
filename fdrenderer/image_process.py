@@ -95,7 +95,7 @@ class ImageProcess:
 
         blank_image_with_text = self.__draw_text(blank_image, lines, adjusted_font_size)
 
-        template = Image.open(self.__template_path).convert("RGBA")
+        template = Image.open(self.__template_path).convert("RGBA").resize((1280, 720))
         template.paste(blank_image_with_text, (252, 250), blank_image_with_text)
         template_filename = (
             f"./cache/{len(subtitles)*len(lines) * randint(0, 9999999)}.png"
