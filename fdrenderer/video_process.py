@@ -27,12 +27,12 @@ class VideoProcess:
         clips = []
         for drops in self.__data.values():
             for drop in drops:
-                audioFile = drop.AudiofilePath
+                audio_file = drop.AudiofilePath
                 delay = drop.Delay
                 subtitles = drop.Subtitles
 
                 image = image_processor.process_image(subtitles)
-                audio_сlip = AudioFileClip(audioFile)
+                audio_сlip = AudioFileClip(audio_file)
                 image_clip: ImageClip = (
                     ImageClip(image)
                     .set_duration(audio_сlip.duration + delay)
