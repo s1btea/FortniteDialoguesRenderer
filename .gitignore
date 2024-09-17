@@ -1,0 +1,7 @@
+drops.json
+.venv
+results
+__pycache__
+*.pyc
+cache
+resultTEMP_MPY_wvf_snd.mp3
